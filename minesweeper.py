@@ -1,6 +1,5 @@
 import itertools
 import random
-import copy
 from pygame.constants import CONTROLLER_BUTTON_DPAD_LEFT
 
 
@@ -289,7 +288,7 @@ class MinesweeperAI():
 
         
 
-        print(f"safes are {self.safes.difference(self.moves_made)}, bombs are {self.mines}")
+        #print(f"safes are {self.safes.difference(self.moves_made)}, bombs are {self.mines}")
         
                 
         
