@@ -314,6 +314,12 @@ class MinesweeperAI():
             1) have not already been chosen, and
             2) are not known to be mines
         """
+        moves_not_made = set()
+        for i in range(8):
+            for j in range(8):
+                moves_not_made.add((i,j))
+        if moves_not_made == self.mines:
+            return None
         while True:
             i = random.randrange(8)
             j = random.randrange(8)
