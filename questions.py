@@ -184,13 +184,14 @@ def top_sentences(query, sentences, idfs, n):
         for x in range(n):
             output.append(sentences_with_highest_idf[x])
     else:
-        output += sentences_with_highest_idf[x]
+        for x in range(n):
+            output += sentences_with_highest_idf[x]
         while len(output) != n:
             for sentence in sentence_ranking:
                 if sentence not in output:
                     output.append(sentence)
     
     return output
-    
+
 if __name__ == "__main__":
     main()
